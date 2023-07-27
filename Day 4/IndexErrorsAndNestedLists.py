@@ -11,6 +11,12 @@ num_of_states = len(states_of_america)
 
 print(states_of_america[48])
 
-dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectrines", "Apples", "Grapes", "Peaches", 
-               "Cherries", "Pears", "Tomatoes", "Celery", "Potatoes"]
+#dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectrines", "Apples", "Grapes", "Peaches", 
+#               "Cherries", "Pears", "Tomatoes", "Celery", "Potatoes"]
 
+fruits = ["Strawberries", "Nectrines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+dirty_dozen = [fruits, vegetables]
+
+print(dirty_dozen)
