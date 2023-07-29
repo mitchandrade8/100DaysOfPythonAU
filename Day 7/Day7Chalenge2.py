@@ -25,3 +25,11 @@ for letter in chosen_word:
         print("Right")
     else:
         print("Wrong")
+
+# Todo - 3: Print 'Display' and you should see the guessed letter in the correct position and every other letter replace with "_".
+# Hint - Don't worry about getting the user to guess the next letter. We'll tackle that in step 3.
+
+
+
+# Will think about the problems and coming problems 
+
