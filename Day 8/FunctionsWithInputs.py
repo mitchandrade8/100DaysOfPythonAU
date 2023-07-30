@@ -15,3 +15,5 @@ def greet_with_name(name):
 
 greet_with_name("Mitch")
 
+# key notes are 'Parameter' & 'Argument'
+
