@@ -29,9 +29,10 @@ def format_name(first_Name, last_Name):
     formated_f_name = first_Name.title()
     formated_l_name = last_Name.title()
 
-    print(f"{formated_f_name} {formated_l_name}")
+    return f"{formated_f_name} {formated_l_name}"
 
-format_name("mitch", "andrade")
+formated_string = format_name("mitch", "andrade")
+print(formated_string)
 
 
 
