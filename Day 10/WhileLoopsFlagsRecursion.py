@@ -1,4 +1,5 @@
 
+
 # Core Functions
 
 # Addition
@@ -28,6 +29,7 @@ operations = {
 # Recursion
 
 def calculator():
+
     num1 = int(input("What is the first number?: "))
 
     for symbol in operations:
