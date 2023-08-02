@@ -25,28 +25,34 @@ operations = {
     "/": divide,
 }
 
-num1 = int(input("What is the first number?: "))
+# Recursion
 
-for symbol in operations:
-    print(symbol)
+def calculator():
+    num1 = int(input("What is the first number?: "))
 
-operation_symbol = input("Pick an operation from the line above: ")
+    for symbol in operations:
+        print(symbol)
 
-num2 = int(input("What is the second number? "))
+    should_continue = True
+
+    while should_continue:
+
+        operation_symbol = input("Pick an operation: ")
+        num2 = int(input("What is the next number? "))
+        calculation_function = operations[operation_symbol]
+        answer = calculation_function(num1, num2)
+
+        print(f"{num1} {operation_symbol} {num2} = {answer}")
+
+        #Reusability and using the previous answer ** Chaining 
+
+        if input(f"Type 'y' to continue calculating with {answer}, or type 'n' to exit: ") == "y":
+            num1 = answer
+        else: 
+            should_continue = False
+            calculator()
+            # Recursion because the function will go find itself and reset 
+                # Would explain recursion as reseting to the beginning state: Start of a lifecycle
 
 
-calculation_function = operations[operation_symbol]
-first_answer = calculation_function(num1, num2)
-
-print(f"{num1} {operation_symbol} {num2} = {first_answer}")
-
-# Power of using a 'Return' statement vs a 'Print' statement
-
-operation_symbol = input("Pick another operation: ")
-num3 = int(input("What is the next number?: "))
-calculation_function = operations[operation_symbol]
-second_answer = calculation_function(calculation_function(num1, num2), num3)
-
-print(f"{first_answer} {operation_symbol} { num3} = {second_answer}")
-
-#Reusability and using the previous answer ** Chaining 
+calculator()
